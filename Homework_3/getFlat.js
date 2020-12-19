@@ -1,14 +1,14 @@
-function makeFlat(arr) {
+function getFlat(arr) {
     return arr.reduce(
         (acc, item) =>
-            Array.isArray(item) ? [...acc, ...makeFlat(item)] : [...acc, item],
+            Array.isArray(item) ? [...acc, ...getFlat(item)] : [...acc, item],
         []
     );
 }
 
 function main() {
     const arr = [1, 2, 3, [1, 2, 3], [1, 2, 3, [4, 5, 6]]];
-    const res = makeFlat(arr);
+    const res = getFlat(arr);
     console.log(res);
 }
 
