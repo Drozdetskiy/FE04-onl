@@ -7,9 +7,12 @@ function getFlat(arr) {
 }
 
 function main() {
-    const arr = [1, 2, 3, [1, 2, 3], [1, 2, 3, [4, 5, 6]]];
-    const res = getFlat(arr);
-    console.log(res);
+    const arr0 = [1, 2, 3, [1, 2, 3], [1, 2, 3, [4, 5, 6]]];
+    const res0 = getFlat(arr0);
+    const arr1 = [1, 2, 3, [4, "str", 6, [7, "str", 9]]];
+    const res1 = getFlat(arr1);
+    console.log(res0);
+    console.log(res1);
 }
 
 main();
